@@ -9,3 +9,8 @@
     max-height: 100vh;
     overflow: scroll;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
