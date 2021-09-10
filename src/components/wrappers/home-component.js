@@ -12,6 +12,7 @@ const Home = ()=>{
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleClick = ()=> setData(...data)
 
     return(
         <div className="home_container">
@@ -38,7 +39,7 @@ const Home = ()=>{
             <Container className="d-flex justify-content-end">
             <Row className="align-items-center">
                 <Col>
-                <Button className="button_send" size="sm" variant="outline_light">Nuevo grupo</Button>
+                <Button className="button_send" size="sm" variant="outline_light" onClick={handleClick}>Nuevo grupo</Button>
                 </Col>
             </Row>
             </Container>
