@@ -1,20 +1,23 @@
 import React from 'react'
 import {Container, Form, Row, Col, Button} from 'react-bootstrap'
-import './styles/login-form.css'
+import { useHistory } from "react-router-dom";
+
 
 const LoginForm = ()=>{
+    let history = useHistory();
     function handleSubmit(e) {
         e.preventDefault()
         console.log('Hola');
+        history.push("/home")
     }
     return(
         <Container fluid className="mt-5 align-items-center justify-content-center">
         <Form onSubmit={handleSubmit}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Row className="align-items-center justify-content-center">
-            <Col className="justify-content-center" xs={9}>
+            <Col className="justify-content-center" xs={9} md={3}>
                 <Form.Group>
-                    <Form.Label className="usuario m-3">INICIAR SESIÓN</Form.Label>
+                    <Form.Label className="titulo m-3 pb-4 font-weight-bold">INICIAR SESIÓN</Form.Label>
                 </Form.Group>
                 <Form.Group>
                     <Form.Control/>
@@ -24,7 +27,7 @@ const LoginForm = ()=>{
                     <Form.Control type="password"/>
                     <Form.Label className="usuario m-3">Contraseña</Form.Label>
                 </Form.Group>
-                <Button className="button_send m-5" variant="outline_light" type="submit">
+                <Button className="button_send m-4" variant="outline_light" type="submit">
                 Enviar
                 </Button>
             </Col>
