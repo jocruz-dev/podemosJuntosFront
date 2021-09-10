@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import { useHistory } from "react-router-dom";
+
 
 const MemberContainer = ()=>{
     const [data, setData] = useState()
-    let history = useHistory();
+    
     const handleClick = async ()=>{
         const response = await fetch('http://portafolio-env.eba-d3j6tvyk.us-east-1.elasticbeanstalk.com/api/score')
         const responseJson = await response.json()
